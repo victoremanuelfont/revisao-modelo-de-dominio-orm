@@ -7,4 +7,7 @@ public class Order {
  private Long id;
  private Instant moment;
  private OrderStatus status;
+
+ private User client;
+
 }
