@@ -1,13 +1,19 @@
 package com.revisaocapdois.dscommerce.entities;
 
+import jakarta.persistence.*;
+
 import java.time.Instant;
 
+@Entity
+@Table(name = "tb_order")
 public class Order {
 
- private Long id;
- private Instant moment;
- private OrderStatus status;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+     private Long id;
+     private Instant moment;
+     private OrderStatus status;
 
- private User client;
+     private User client;
 
 }
