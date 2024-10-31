@@ -1,5 +1,8 @@
 package com.revisaocapdois.dscommerce.entities;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class Product {
 
     private Long id;
@@ -7,6 +10,9 @@ public class Product {
     private String description;
     private Double price;
     private String imgUrl;
+
+    private Set<Category> categories = new HashSet<>();
+
 
     public Product() {
     }
@@ -57,5 +63,9 @@ public class Product {
 
     public void setImgUrl(String imgUrl) {
         this.imgUrl = imgUrl;
+    }
+
+    public Set<Category> getCategories() {
+        return categories;
     }
 }
